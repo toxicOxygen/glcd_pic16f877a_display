@@ -1,0 +1,132 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     currentImage
+021-022 i
+023     imagesSelected
+024     startSlide
+025     @TRIS_C
+026-032 MAIN.txt1
+033     glcd_image.inverse
+033     glcd_init.mode
+033     glcd_text57.x
+033-034 @DIV1616.P1
+033     MAIN.@SCRATCH1
+034     glcd_image.i
+034     @delay_ms1.P1
+034     glcd_text57.y
+035-036 glcd_text57.textptr
+035-036 @DIV1616.P1
+035     glcd_image.j
+036     glcd_image.k
+037     glcd_text57.size
+037-038 glcd_image.count
+037     @DIV1616.@SCRATCH1
+038     glcd_text57.color
+039     glcd_text57.j
+039     glcd_image.width
+03A     glcd_image.height
+03A     glcd_text57.k
+03B     glcd_text57.l
+03B     glcd_fillScreen.color
+03B     glcd_image.@SCRATCH1
+03C     glcd_fillScreen.i
+03C     glcd_text57.m
+03D-041 glcd_text57.pixelData
+03D     glcd_fillScreen.j
+03E     glcd_fillScreen.@SCRATCH1
+042     glcd_text57.@SCRATCH1
+043     glcd_text57.@SCRATCH2
+044     @MUL88.P1
+044     glcd_pixel.x
+044     glcd_text57.@SCRATCH3
+045     @MUL88.P1
+045     glcd_pixel.y
+045     glcd_text57.@SCRATCH4
+046     glcd_pixel.color
+046     glcd_text57.@SCRATCH5
+047     glcd_pixel.data
+048.0   glcd_pixel.side
+049     glcd_pixel.@SCRATCH1
+04A     glcd_readByte.side
+04A     glcd_pixel.@SCRATCH2
+04B     glcd_writeByte.side
+04B     glcd_readByte.data
+04C     glcd_writeByte.data
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  FONT.call
+00000B  FONT.data
+00010A  FONT2.call
+00010E  FONT2.data
+0001EA  image1.call
+0001F3  image1.data
+0005F3  sevenSegment.call
+0005F7  sevenSegment.data
+0005FB  @delay_ms1
+000610  glcd_writeByte
+00063B  @MUL88
+000660  glcd_fillScreen
+0006A6  glcd_init
+0006EF  glcd_readByte
+00071C  glcd_pixel
+000792  @DIV1616
+000800  image2.call
+000809  image2.data
+000C09  glcd_text57
+000CF1  glcd_image
+000DAF  MAIN
+000DAF  @cinit1
+000DBB  @cinit2
+001000  image3.call
+001009  image3.data
+
+Project Directory:
+    C:\Users\Kwaku\Desktop\kumbaya\code\
+
+Project Files:
+    main.c                                                  [06-Jan-21 19:44  CRC=957ADAD9]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [22-Jun-13 02:04  CRC=4E65664C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\HDM64GS12.c [08-Jul-10 18:47  CRC=C1C373EF]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\graphics.c [06-Jul-10 18:49  CRC=70BB89DE]
+
+Source signature=871AC8D0
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
